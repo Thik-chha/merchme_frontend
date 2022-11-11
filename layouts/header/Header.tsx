@@ -88,8 +88,10 @@ const NavBar = () => {
             />
             <Button
               size={["sm", "md"]}
+              width={'130px'}
               leftIcon={<AiOutlineUser />}
               colorScheme={"brand"}
+              rounded={'full'}
             >
               Sign up
             </Button>
