@@ -80,13 +80,12 @@ const Carousal = () => {
 
 export const HeroSection = () => {
   return (
-    <Box maxW={"7xl"} mx={'auto'}>
+    <Box maxW={"7xl"} p={4} mx={'auto'}>
       <Flex
         align={"center"}
         flexDir={{ base: "column", sm: "column", md: "row" }}
-        py={{ base: 12, md: 18 }}
         width={"full"}
-        gap={"1rem"}
+        gap={"2rem"}
       >
         <Stack width={"full"}>
           <Heading
