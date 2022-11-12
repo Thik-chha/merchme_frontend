@@ -52,7 +52,6 @@ const CreatorShop = () => {
     }
     return allProducts;
   }, [allProducts, deferredQuery]);
-  console.log(filteredProducts);
 
   return (
     <MainLayout>

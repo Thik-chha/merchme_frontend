@@ -8,7 +8,7 @@ export const products: IProduct[] = [
     price: 450,
     rating: 4.2,
     numReviews: 34,
-    creatorSlug: "srv",
+    creatorSlug: "dixita",
     type: "shirt",
     slug: "wayfarer-shirt"
   },
@@ -19,7 +19,7 @@ export const products: IProduct[] = [
     price: 450,
     rating: 4.2,
     numReviews: 34,
-    creatorSlug: "srv",
+    creatorSlug: "dixita-karki",
     type: "shirt",
     slug: "wayfarer-shirt"
   },
@@ -72,6 +72,20 @@ export const CREATORS: ICreator[] = [
     },
     merchs: products,
     slug: "srv"
+  },
+  {
+    id: 4,
+    firstName: "Dixita",
+    lastName: "Karki",
+    status: "Singer",
+    imageUrl: "/dixita.webp",
+    handles: {
+      instagram: "dixita-karki",
+      facebook: "dixita-karki",
+      other: 'dixita-karki'
+    },
+    merchs: products,
+    slug: "dixita-karki"
   },
   {
     id: 2,
