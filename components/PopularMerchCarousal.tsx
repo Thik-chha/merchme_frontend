@@ -53,12 +53,15 @@ export const PopularMerchCarousal: FC<popularMerchCarousalProps> = ({
               ) : (
                 <Box padding={`0.5rem`}>
                   <ProductCard
+                    creatorSlug={product.creatorSlug}
+                    type={product.type}
                     name={product.name}
                     price={product.price}
                     numReviews={product.numReviews}
                     isNew={product.isNew}
                     imageURL={product.imageURL}
                     rating={product.rating}
+                    slug={product.slug}
                   />
                 </Box>
               )}

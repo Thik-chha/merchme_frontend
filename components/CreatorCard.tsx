@@ -2,7 +2,6 @@ import { Box, Image, Heading, VStack, HStack, Text } from "@chakra-ui/react";
 import Link from "next/link";
 import React, { FC } from "react";
 import {
-  FaBan,
   FaBars,
   FaFacebook,
   FaInstagram,
@@ -32,7 +31,7 @@ export const CreatorCard: FC<ICreator> = ({
         shadow: "md",
       }}
     >
-      <Link href={`/shop/${slug}`} style={{ width: "100%" }}>
+      <Link href={`/${slug}`} style={{ width: "100%" }}>
         <Box height={"300px"} width={"full"} position={"relative"}>
           <Image
             h={"100%"}
@@ -56,7 +55,7 @@ export const CreatorCard: FC<ICreator> = ({
           noOfLines={1}
           fontSize={"1.3rem"}
         >
-          <Link href={`/shop/${slug}`}>{firstName + " " + lastName}</Link>
+          <Link href={`/${slug}`}>{firstName + " " + lastName}</Link>
         </Heading>
         <Text mt={"0 !important"} width={"full"}>
           {status}

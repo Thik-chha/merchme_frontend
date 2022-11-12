@@ -8,6 +8,7 @@ import {
   chakra,
   Tooltip,
 } from "@chakra-ui/react";
+import Link from "next/link";
 import React, { FC } from "react";
 import { BsStar, BsStarFill, BsStarHalf } from "react-icons/bs";
 import { FiShoppingCart } from "react-icons/fi";
@@ -53,6 +54,8 @@ export const ProductCard: FC<IProduct> = ({
   price,
   rating,
   numReviews,
+  creatorSlug,
+  slug,
 }) => {
   return (
     <Box
@@ -88,7 +91,7 @@ export const ProductCard: FC<IProduct> = ({
             lineHeight="tight"
             noOfLines={1}
           >
-            {name}
+            <Link href={`/${creatorSlug}/${slug}`}>{name}</Link>
           </Box>
           <Tooltip
             label="Add to cart"
