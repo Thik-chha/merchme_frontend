@@ -17,6 +17,7 @@ export const CreatorCard: FC<ICreator> = ({
   handles,
   status,
   imageUrl,
+  slug,
 }) => {
   return (
     <VStack
@@ -26,12 +27,12 @@ export const CreatorCard: FC<ICreator> = ({
       position="relative"
       borderRadius={"8px"}
       overflow={"hidden"}
-      transition={'0.2s ease-in-out'}
+      transition={"0.2s ease-in-out"}
       _hover={{
         shadow: "md",
       }}
     >
-      <Link href={"#"} style={{ width: "100%" }}>
+      <Link href={`/shop/${slug}`} style={{ width: "100%" }}>
         <Box height={"300px"} width={"full"} position={"relative"}>
           <Image
             h={"100%"}
@@ -55,7 +56,7 @@ export const CreatorCard: FC<ICreator> = ({
           noOfLines={1}
           fontSize={"1.3rem"}
         >
-          <Link href={"#"}>{firstName + " " + lastName}</Link>
+          <Link href={`/shop/${slug}`}>{firstName + " " + lastName}</Link>
         </Heading>
         <Text mt={"0 !important"} width={"full"}>
           {status}

@@ -169,7 +169,7 @@ export const TestemonialsSection = () => {
           <chakra.strong color={useColorModeValue("gray.700", "gray.50")}>
             150+
           </chakra.strong>{" "}
-          influencers use Merchme to publish their merchandise!
+          influencers use Fanpasal to publish their merchandise!
         </chakra.h2>
       </Box>
       <SimpleGrid

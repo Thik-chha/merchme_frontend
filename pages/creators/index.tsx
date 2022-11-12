@@ -1,60 +1,14 @@
 import { Box, Heading, SimpleGrid, Tag, Text } from "@chakra-ui/react";
 import Head from "next/head";
 import { CreatorCard } from "../../components/CreatorCard";
-import { ICreator } from "../../interfaces";
+import { CREATORS } from "../../data";
 import { MainLayout } from "../../layouts/Mainlayout";
-
-const CREATORS: ICreator[] = [
-  {
-    id: 1,
-    firstName: "Sajjan Raj",
-    lastName: "Vaidya",
-    status: "Singer, Musician ",
-    imageUrl: "/assets/srv.webp",
-    handles: {
-      instagram: "sajjanrajvaidya",
-      facebook: "sajjanrajvaidya",
-      other: 'nice'
-    },
-  },
-  {
-    id: 2,
-    firstName: "Yabesh",
-    lastName: "Thapa",
-    status: "Singer, Musician ",
-    imageUrl: "/assets/yabesh.jpeg",
-    handles: {
-      instagram: "yabush69",
-      youtube: "yabush69",
-    },
-  },
-  {
-    id: 3,
-    firstName: "Sajjan Raj",
-    lastName: "Vaidya",
-    status: "Singer, Musician ",
-    imageUrl: "/assets/srv.webp",
-    handles: {
-      instagram: "sajjanrajvaidya",
-    },
-  },
-  {
-    id: 4,
-    firstName: "Yabesh",
-    lastName: "Thapa",
-    status: "Singer, Musician ",
-    imageUrl: "/assets/yabesh.jpeg",
-    handles: {
-      instagram: "yabush69",
-    },
-  },
-];
 
 const CreatorsListPage = () => {
   return (
     <MainLayout>
       <Head>
-        <title>Creators | MerchBro</title>
+        <title>Creators | Fanpasal</title>
       </Head>
       <Box maxW={"7xl"} mx={"auto"}>
         <Tag rounded={"full"} colorScheme={"brand"}>
@@ -85,6 +39,8 @@ const CreatorsListPage = () => {
               handles={creator.handles}
               status={creator.status}
               imageUrl={creator.imageUrl}
+              merchs={creator.merchs}
+              slug={creator.slug}
             />
           ))}
         </SimpleGrid>
