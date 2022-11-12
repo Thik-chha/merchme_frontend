@@ -110,7 +110,7 @@ const CreatorShop = () => {
               <SimpleGrid
                 gap={"1rem"}
                 rowGap={"2rem"}
-                gridTemplateColumns={"repeat(3, 1fr)"}
+                gridTemplateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]}
               >
                 {creatorDetail ? (
                   allProducts.map((product) => (
@@ -136,7 +136,7 @@ const CreatorShop = () => {
               <SimpleGrid
                 gap={"1rem"}
                 rowGap={"2rem"}
-                gridTemplateColumns={"repeat(3, 1fr)"}
+                gridTemplateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]}
               >
                 {filteredProducts.map((product) => (
                   <ProductCard

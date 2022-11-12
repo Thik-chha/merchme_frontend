@@ -89,15 +89,9 @@ const NavBar = () => {
               onClick={onSearchModalOpen}
               variant={"unstyled"}
             />
-            <Button
-              size={["sm", "md"]}
-              width={"130px"}
-              leftIcon={<AiOutlineUser />}
-              colorScheme={"brand"}
-              rounded={"full"}
-            >
-              Sign up
-            </Button>
+            <Link href={"/register"}>
+              <chakra.span backgroundColor={'brand.500'} p={'0.5rem 1rem'} rounded={'full'} color={'white'}>Sign up</chakra.span>
+            </Link>
             <IconButton
               display={{ base: "flex", md: "none" }}
               backgroundColor={`transparent`}

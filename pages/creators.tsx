@@ -11,7 +11,7 @@ const CreatorsListPage = () => {
       <Head>
         <title>Creators | Fanpasal</title>
       </Head>
-      <Box maxW={"7xl"} mx={"auto"}>
+      <Box maxW={"7xl"} mx={"auto"} p={'1rem'}>
         <Tag rounded={"full"} colorScheme={"brand"}>
           Amazing Creators
         </Tag>
@@ -31,7 +31,9 @@ const CreatorsListPage = () => {
           </Text>{" "}
           partners
         </Heading>
-        <SimpleGrid rowGap={'2rem'} mt={"1rem"} gap={'1rem'} gridTemplateColumns={"repeat(3, 1fr)"}>
+        <SimpleGrid rowGap={'2rem'}  mt={"1rem"} gap={'1rem'}
+                gridTemplateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(3, 1fr)"]}
+        >
           {CREATORS.map((creator) => (
             <CreatorCard
               key={creator.id}
