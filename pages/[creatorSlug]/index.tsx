@@ -12,10 +12,15 @@ import {
   Tab,
   TabPanel,
   SimpleGrid,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Text,
 } from "@chakra-ui/react";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import { useMemo } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
+import { CiSearch } from "react-icons/ci";
 import { CoverPhoto, VerifiedCreator } from "../../components";
 import { ProductCard } from "../../components/ProductCard";
 import { CREATORS } from "../../data";
@@ -29,6 +34,26 @@ const CreatorShop = () => {
     () => CREATORS.find((creator) => creator.slug === creatorSlug),
     [creatorSlug]
   );
+  const allProducts = useMemo(() => {
+    if (creatorDetail) {
+      return creatorDetail.merchs;
+    }
+    return [];
+  }, [creatorDetail]);
+
+  const [query, setQuery] = useState("");
+  const deferredQuery = useDeferredValue(query);
+
+  const filteredProducts = useMemo(() => {
+    if (deferredQuery) {
+      return allProducts.filter((product) =>
+        product.name.toLowerCase().includes(deferredQuery.toLowerCase())
+      );
+    }
+    return allProducts;
+  }, [allProducts, deferredQuery]);
+  console.log(filteredProducts);
+
   return (
     <MainLayout>
       <Head>
@@ -59,6 +84,20 @@ const CreatorShop = () => {
             Follow
           </Button>
         </HStack>
+        <Box width={"full"} my={"1rem"}>
+          <InputGroup maxW={"2xl"} ml={"auto"}>
+            <Input
+              value={query}
+              onChange={(e) => setQuery(e.target.value)}
+              type={"search"}
+              placeholder={"Type to search..."}
+              variant={"flushed"}
+            />
+            <InputRightElement>
+              <CiSearch />
+            </InputRightElement>
+          </InputGroup>
+        </Box>
         <Tabs colorScheme={"brand"} mt={"1rem"}>
           <TabList>
             <Tab>Home</Tab>
@@ -74,7 +113,7 @@ const CreatorShop = () => {
                 gridTemplateColumns={"repeat(3, 1fr)"}
               >
                 {creatorDetail ? (
-                  creatorDetail.merchs.map((product) => (
+                  allProducts.map((product) => (
                     <ProductCard
                       imageURL={product.imageURL}
                       name={product.name}
@@ -84,6 +123,8 @@ const CreatorShop = () => {
                       rating={product.rating}
                       numReviews={product.numReviews}
                       creatorSlug={product.creatorSlug}
+                      slug={product.slug}
+                      type={product.type}
                     />
                   ))
                 ) : (
@@ -91,8 +132,31 @@ const CreatorShop = () => {
                 )}
               </SimpleGrid>
             </TabPanel>
-            <TabPanel></TabPanel>
-            <TabPanel></TabPanel>
+            <TabPanel>
+              <SimpleGrid
+                gap={"1rem"}
+                rowGap={"2rem"}
+                gridTemplateColumns={"repeat(3, 1fr)"}
+              >
+                {filteredProducts.map((product) => (
+                  <ProductCard
+                    imageURL={product.imageURL}
+                    name={product.name}
+                    isNew={product.isNew}
+                    key={product.id}
+                    price={product.price}
+                    rating={product.rating}
+                    numReviews={product.numReviews}
+                    creatorSlug={product.creatorSlug}
+                    type={product.type}
+                    slug={product.slug}
+                  />
+                ))}
+              </SimpleGrid>
+            </TabPanel>
+            <TabPanel>
+              <Text>No items in this category...</Text>
+            </TabPanel>
           </TabPanels>
         </Tabs>
       </Box>

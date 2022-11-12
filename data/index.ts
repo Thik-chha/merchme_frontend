@@ -9,6 +9,8 @@ export const products: IProduct[] = [
     rating: 4.2,
     numReviews: 34,
     creatorSlug: "srv",
+    type: "shirt",
+    slug: "wayfarer-shirt"
   },
   {
     isNew: false,
@@ -18,6 +20,8 @@ export const products: IProduct[] = [
     rating: 4.2,
     numReviews: 34,
     creatorSlug: "srv",
+    type: "shirt",
+    slug: "wayfarer-shirt"
   },
   {
     isNew: false,
@@ -27,6 +31,8 @@ export const products: IProduct[] = [
     rating: 4.2,
     numReviews: 34,
     creatorSlug: "srv",
+    type: "shirt",
+    slug: "wayfarer-shirt"
   },
   {
     isNew: true,
@@ -36,15 +42,8 @@ export const products: IProduct[] = [
     rating: 4.2,
     numReviews: 34,
     creatorSlug: "srv",
-  },
-  {
-    isNew: false,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 450,
-    rating: 4.2,
-    numReviews: 34,
-    creatorSlug: "srv",
+    type: "shirt",
+    slug: "wayfarer-shirt"
   },
   {
     isNew: true,
@@ -54,6 +53,8 @@ export const products: IProduct[] = [
     rating: 4.2,
     numReviews: 34,
     creatorSlug: "srv",
+    type: "shirt",
+    slug: "wayfarer-shirt"
   },
 ];
 

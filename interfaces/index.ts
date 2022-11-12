@@ -7,6 +7,7 @@ export type navItem = {
 
 export interface IProduct {
   id?: number;
+  slug?: string;
   isNew: boolean;
   imageURL: string;
   name: string;
@@ -15,6 +16,7 @@ export interface IProduct {
   numReviews: number;
   creatorSlug: string;
   creator?: ICreator;
+  type: "shirt" | "sticker";
 }
 
 export interface ICreator {

@@ -1,8 +1,9 @@
+
 import { Box, Heading, SimpleGrid, Tag, Text } from "@chakra-ui/react";
 import Head from "next/head";
-import { CreatorCard } from "../../components/CreatorCard";
-import { CREATORS } from "../../data";
-import { MainLayout } from "../../layouts/Mainlayout";
+import { CreatorCard } from "../components/CreatorCard";
+import { CREATORS } from "../data";
+import { MainLayout } from "../layouts/Mainlayout";
 
 const CreatorsListPage = () => {
   return (
