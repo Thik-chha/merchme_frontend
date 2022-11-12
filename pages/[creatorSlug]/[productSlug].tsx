@@ -34,6 +34,7 @@ export default function ProductDetail() {
   );
   return (
     <MainLayout>
+      <title>{productDetail ? `${productDetail.name} | ${productDetail.creator?.firstName}` : "Fanpasal"}</title>
       <Container maxW={"7xl"}>
         <SimpleGrid
           columns={{ base: 1, lg: 2 }}
@@ -47,6 +48,7 @@ export default function ProductDetail() {
           >
             {productDetail ? (
               <Image
+                style={{borderRadius: '8px'}}
                 src={productDetail.imageURL}
                 alt={productDetail.name}
                 objectFit={"cover"}
