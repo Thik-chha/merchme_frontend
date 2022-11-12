@@ -13,8 +13,10 @@ import {
 import Link from "next/link";
 import Head from "next/head";
 import { MainLayout } from "../layouts/Mainlayout";
+import { useRouter } from "next/router";
 
 const LoginPage = () => {
+  const router = useRouter();
   return (
     <MainLayout>
       <Head>
@@ -61,7 +63,7 @@ const LoginPage = () => {
                 <Input type="password" placeholder={'******'} />
               </FormControl>
               <Stack spacing={10}>
-                <Button color={"white"} colorScheme={"brand"}>
+                <Button color={"white"} onClick={() => router.push('/admin/dixita-karki/')} colorScheme={"brand"}>
                   Sign in
                 </Button>
               </Stack>

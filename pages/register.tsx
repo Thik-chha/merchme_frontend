@@ -13,6 +13,7 @@ import {
   Heading,
   Text,
   useColorModeValue,
+  Checkbox,
 } from '@chakra-ui/react';
 import Link from "next/link";
 import { useState } from 'react';
@@ -93,6 +94,12 @@ export default function SignupCard() {
                     </Button>
                   </InputRightElement>
                 </InputGroup>
+              </FormControl>
+              <FormControl  itemProp={'checked'} id="checkbox" display={'flex'} alignItems={'center'} gap={'0.4rem'}>
+                <Checkbox/> 
+                <FormLabel>
+                Sign up as a creator.
+                </FormLabel>
               </FormControl>
               <Stack spacing={10} pt={2}>
                 <Button

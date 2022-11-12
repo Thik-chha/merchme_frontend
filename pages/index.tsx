@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <MainLayout>
       <Head>
-        <title>Home | MerchBro</title>
+        <title>Home | Fanpasal</title>
       </Head>
       <HeroSection/>
       <FeaturesSection/>
