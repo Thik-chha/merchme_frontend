@@ -11,14 +11,14 @@ import { useState } from "react";
 import ISwiper from "swiper";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
 import { IProduct } from "../interfaces";
-import { PopularCourseCarousal } from "./PopularCourseCarousal";
+import { PopularMerchCarousal } from "./PopularMerchCarousal";
 
 const products: IProduct[] = [
   {
     isNew: true,
     imageURL: "/assets/luga.jpg",
     name: "Wayfarer Classic",
-    price: 4.5,
+    price: 450,
     rating: 4.2,
     numReviews: 34,
   },
@@ -26,7 +26,7 @@ const products: IProduct[] = [
     isNew: false,
     imageURL: "/assets/luga.jpg",
     name: "Wayfarer Classic",
-    price: 4.5,
+    price: 450,
     rating: 4.2,
     numReviews: 34,
   },
@@ -34,23 +34,7 @@ const products: IProduct[] = [
     isNew: false,
     imageURL: "/assets/luga.jpg",
     name: "Wayfarer Classic",
-    price: 4.5,
-    rating: 4.2,
-    numReviews: 34,
-  },
-  {
-    isNew: false,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 4.5,
-    rating: 4.2,
-    numReviews: 34,
-  },
-  {
-    isNew: false,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 4.5,
+    price: 450,
     rating: 4.2,
     numReviews: 34,
   },
@@ -58,7 +42,23 @@ const products: IProduct[] = [
     isNew: true,
     imageURL: "/assets/luga.jpg",
     name: "Wayfarer Classic",
-    price: 4.5,
+    price: 450,
+    rating: 4.2,
+    numReviews: 34,
+  },
+  {
+    isNew: false,
+    imageURL: "/assets/luga.jpg",
+    name: "Wayfarer Classic",
+    price: 450,
+    rating: 4.2,
+    numReviews: 34,
+  },
+  {
+    isNew: true,
+    imageURL: "/assets/luga.jpg",
+    name: "Wayfarer Classic",
+    price: 450,
     rating: 4.2,
     numReviews: 34,
   },
@@ -76,8 +76,8 @@ export const PopularSection = () => {
     >
       <VStack width={"full"} maxW={"7xl"} mx={"auto"}>
         <HStack width={"full"} justifyContent={"space-between"}>
-          <Heading>Popular Courses</Heading>
-          <Button colorScheme={"brand"} href={"#courses?free=true"} as={Link}>
+          <Heading>Popular Merchs</Heading>
+          <Button colorScheme={"brand"} href={"/catelogue"} rounded={'full'} as={Link}>
             Browse All
           </Button>
         </HStack>
@@ -116,7 +116,7 @@ export const PopularSection = () => {
             icon={<ArrowForwardIcon />}
           ></IconButton>
         </HStack>
-        <PopularCourseCarousal
+        <PopularMerchCarousal
           products={products}
           isLoading={false}
           isError={false}

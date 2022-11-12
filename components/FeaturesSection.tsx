@@ -7,7 +7,6 @@ import {
   Text,
   Stack,
   Flex,
-  Heading,
 } from "@chakra-ui/react";
 import { FcAssistant, FcInTransit } from "react-icons/fc";
 import { FaDollarSign } from "react-icons/fa";
