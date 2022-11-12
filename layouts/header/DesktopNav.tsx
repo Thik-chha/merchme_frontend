@@ -2,7 +2,6 @@ import { FC } from "react";
 import {
   Box,
   Stack,
-  Link,
   Popover,
   PopoverTrigger,
   PopoverContent,
@@ -12,6 +11,7 @@ import {
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import dynamic from "next/dynamic";
 import { navItem } from "../../interfaces";
+import Link from "next/link";
 
 const DDesktopSubNav = dynamic(() => import("./DesktopSubNav"));
 
@@ -22,21 +22,25 @@ const DesktopNav: FC<{ NAV_ITEMS: navItem[] }> = ({ NAV_ITEMS }) => {
         <Box key={navItem.label}>
           <Popover trigger={"hover"} placement={"bottom-start"}>
             <PopoverTrigger>
-              <Link
-                p={2}
-                href={navItem.href ?? "#"}
-                fontSize={"md"}
-                fontWeight={"normal"}
-                _hover={{
-                  textDecoration: "underline",
-                }}
-              >
-                <chakra.span>{navItem.label}</chakra.span>
-                <chakra.span ml={"2px"} color={"white"} fontWeight={"bold"}>
-                  {navItem.children && (
-                    <ChevronDownIcon fontWeight={"bold"} fontSize={"1.5rem"} />
-                  )}
-                </chakra.span>
+              <Link href={navItem.href || "#"}>
+                <Box
+                  p={2}
+                  fontSize={"md"}
+                  fontWeight={"normal"}
+                  _hover={{
+                    textDecoration: "underline",
+                  }}
+                >
+                  <chakra.span>{navItem.label}</chakra.span>
+                  <chakra.span ml={"2px"} color={"white"} fontWeight={"bold"}>
+                    {navItem.children && (
+                      <ChevronDownIcon
+                        fontWeight={"bold"}
+                        fontSize={"1.5rem"}
+                      />
+                    )}
+                  </chakra.span>
+                </Box>
               </Link>
             </PopoverTrigger>
 

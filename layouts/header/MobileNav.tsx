@@ -1,16 +1,17 @@
 import { ChevronDownIcon } from "@chakra-ui/icons";
 import {
+  Box,
   chakra,
   Collapse,
   Flex,
   Icon,
-  Link,
   Stack,
   useColorModeValue,
   useDisclosure,
 } from "@chakra-ui/react";
 import { navItem } from "../../interfaces";
 import { FC } from "react";
+import Link from "next/link";
 
 const MobileNav: FC<{ NAV_ITEMS: navItem[] }> = ({ NAV_ITEMS }) => {
   return (
@@ -65,15 +66,9 @@ const MobileNavItem: FC<navItem> = ({ label, children, href }) => {
         >
           {children &&
             children.map((child: navItem) => (
-              <Link
-                color={`black`}
-                width={`100%`}
-                key={child.label}
-                py={2}
-                href={child.href}
-              >
-                {child.label}
-              </Link>
+              <Box color={`black`} width={`100%`} key={child.label} py={2}>
+                <Link href={child.href || "#"}>{child.label}</Link>
+              </Box>
             ))}
         </Stack>
       </Collapse>
