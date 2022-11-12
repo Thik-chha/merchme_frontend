@@ -18,6 +18,7 @@ import { AiOutlineUser } from "react-icons/ai";
 import { navItem } from "../../interfaces";
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import Link from "next/link";
 
 const DMobileNav = dynamic(() => import("./MobileNav"));
 const DDesktopNav = dynamic(() => import("./DesktopNav"));
@@ -63,12 +64,14 @@ const NavBar = () => {
       >
         <Flex justifyContent={"space-between"} width={"full"}>
           <Box position={"relative"} h={"60px"} w={"120px"}>
-            <Image
-              fill={true}
-              objectFit={"contain"}
-              src={"/assets/logo.png"}
-              alt={"logo"}
-            />
+            <Link href="/">
+              <Image
+                fill={true}
+                objectFit={"contain"}
+                src={"/assets/logo.png"}
+                alt={"logo"}
+              />
+            </Link>
           </Box>
           <Flex alignItems={"center"} display={{ base: "none", md: "flex" }}>
             <DDesktopNav NAV_ITEMS={NAV_ITEMS} />
@@ -88,10 +91,10 @@ const NavBar = () => {
             />
             <Button
               size={["sm", "md"]}
-              width={'130px'}
+              width={"130px"}
               leftIcon={<AiOutlineUser />}
               colorScheme={"brand"}
-              rounded={'full'}
+              rounded={"full"}
             >
               Sign up
             </Button>

@@ -10,59 +10,9 @@ import {
 import { useState } from "react";
 import ISwiper from "swiper";
 import { ArrowBackIcon, ArrowForwardIcon } from "@chakra-ui/icons";
-import { IProduct } from "../interfaces";
 import { PopularMerchCarousal } from "./PopularMerchCarousal";
+import { products } from "../data";
 
-const products: IProduct[] = [
-  {
-    isNew: true,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 450,
-    rating: 4.2,
-    numReviews: 34,
-  },
-  {
-    isNew: false,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 450,
-    rating: 4.2,
-    numReviews: 34,
-  },
-  {
-    isNew: false,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 450,
-    rating: 4.2,
-    numReviews: 34,
-  },
-  {
-    isNew: true,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 450,
-    rating: 4.2,
-    numReviews: 34,
-  },
-  {
-    isNew: false,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 450,
-    rating: 4.2,
-    numReviews: 34,
-  },
-  {
-    isNew: true,
-    imageURL: "/assets/luga.jpg",
-    name: "Wayfarer Classic",
-    price: 450,
-    rating: 4.2,
-    numReviews: 34,
-  },
-];
 
 export const PopularSection = () => {
   const [swiper, setSwiper] = useState<ISwiper>();

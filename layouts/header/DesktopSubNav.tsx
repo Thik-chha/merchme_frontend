@@ -1,16 +1,12 @@
 import { ChevronRightIcon } from "@chakra-ui/icons";
-import { Box, Flex, Icon, Link, Stack, chakra } from "@chakra-ui/react";
+import { Box, Flex, Icon, Stack, chakra } from "@chakra-ui/react";
+import Link from "next/link";
 import { navItem } from "../../interfaces";
 
 const DesktopSubNav: React.FC<navItem> = ({ label, href, subLabel }) => {
   return (
     <Link
-      href={href}
-      role={"group"}
-      display={"block"}
-      p={2}
-      rounded={"md"}
-      _hover={{ backgroundColor: "white" }}
+      href={href || '#'}
     >
       <Stack direction={"row"} align={"center"}>
         <Box>

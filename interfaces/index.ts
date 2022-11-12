@@ -13,10 +13,13 @@ export interface IProduct {
   price: number;
   rating: number;
   numReviews: number;
+  creatorSlug: string;
+  creator?: ICreator;
 }
 
 export interface ICreator {
   id?: number;
+  slug?: string;
   firstName: string;
   lastName: string;
   status: string;
@@ -28,4 +31,6 @@ export interface ICreator {
     instagram?: string;
     other?: string;
   };
+  merchs: IProduct[];
 }
+

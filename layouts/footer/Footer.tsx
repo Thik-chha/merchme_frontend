@@ -125,7 +125,7 @@ export const Footer = () => {
           </Box>
         </Flex>
         <Text pt={6} fontSize={"sm"} textAlign={"center"}>
-          © 2022 Merch Me. All rights reserved
+          © 2022 Fanpasal. All rights reserved
         </Text>
       </Box>
     </Box>
