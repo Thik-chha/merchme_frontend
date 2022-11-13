@@ -70,22 +70,18 @@ export const FeaturesSection = () => {
         <Feature
           icon={<Icon as={FcAssistant} w={10} h={10} />}
           title={"24hr Customer Support"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
+          text={"Never feel too early or late to reach out..."}
         />
         <Feature
           icon={<Icon as={FcInTransit} w={10} h={10} />}
           title={"Your design"}
-          text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
-          }
+          text={"Your design and vibe mixed with our love and hospitality..."}
         />
         <Feature
           icon={<Icon as={FaDollarSign} color={"brand.500"} w={10} h={10} />}
           title={"Your profit"}
           text={
-            "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore..."
+            "Zero Investment, Minimal Risk and a inevitable possibility for growth..."
           }
         />
       </SimpleGrid>

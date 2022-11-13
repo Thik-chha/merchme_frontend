@@ -1,11 +1,4 @@
-import {
-  Flex,
-  Heading,
-  Stack,
-  Text,
-  Button,
-  Box,
-} from "@chakra-ui/react";
+import { Flex, Heading, Stack, Text, Button, Box } from "@chakra-ui/react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { FreeMode, Autoplay } from "swiper";
@@ -80,7 +73,7 @@ const Carousal = () => {
 
 export const HeroSection = () => {
   return (
-    <Box maxW={"7xl"} p={4} mx={'auto'}>
+    <Box maxW={"7xl"} p={4} mx={"auto"}>
       <Flex
         align={"center"}
         flexDir={{ base: "column", sm: "column", md: "row" }}
@@ -99,16 +92,16 @@ export const HeroSection = () => {
             </Text>
           </Heading>
           <Text color={"gray.500"} maxW={"3xl"}>
-            Never miss a meeting. Never be late for one too. Keep track of your
-            meetings and receive smart reminders in appropriate times. Read your
-            smart “Daily Agenda” every morning.
+            Never let your fans feel out of touch and place. Provide a memento
+            to them so that they could gift you with their blessings as well.
+            Focus on what matters to you and your followers.
           </Text>
-          <Stack pt={'0.5rem'} spacing={6} direction={"row"}>
+          <Stack pt={"0.5rem"} spacing={6} direction={"row"}>
             <Button rounded={"full"} px={6} colorScheme={"brand"}>
               See creators
             </Button>
             <Button rounded={"full"} px={6}>
-              Browse catelogue
+              Browse catalogue
             </Button>
           </Stack>
         </Stack>

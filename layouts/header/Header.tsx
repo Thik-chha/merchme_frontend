@@ -38,8 +38,8 @@ const NavBar = () => {
         href: "/creators",
       },
       {
-        label: "Catelogue",
-        href: "/catelogue",
+        label: "Catalogue",
+        href: "/catalogue",
       },
     ],
     []
