@@ -108,7 +108,7 @@ export const HeroSection = () => {
               See creators
             </Button>
             <Button rounded={"full"} px={6}>
-              Browse catelogue
+              Browse catalogue
             </Button>
           </Stack>
         </Stack>

@@ -27,7 +27,7 @@ export const PopularSection = () => {
       <VStack width={"full"} maxW={"7xl"} mx={"auto"}>
         <HStack width={"full"} justifyContent={"space-between"}>
           <Heading>Popular Merchs</Heading>
-          <Button colorScheme={"brand"} href={"/catelogue"} rounded={'full'} as={Link}>
+          <Button colorScheme={"brand"} href={"/catalogue"} rounded={'full'} as={Link}>
             Browse All
           </Button>
         </HStack>
